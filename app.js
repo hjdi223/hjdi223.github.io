@@ -1,8 +1,6 @@
 //Introduction more "atomic" programming with functions
 //We will use a function or collection of reusable commands to
 //draw a geometric pattern resembling a face
-
-
 function FunnyFace(x,y){
   stroke(0,0,0,255);
   fill(199,0,100,255);

@@ -1,11 +1,13 @@
 //Introduction more "atomic" programming with functions
 //We will use a function or collection of reusable commands to
 //draw a geometric pattern resembling a face
-
-
+function changeBackground(color){
+     document.body.style.background = color ;
+   }
+<BODY onload="changeBackground('red');">
 function FunnyFace(x,y){
   stroke(0,0,0,255);
-  fill(199,0,100,255);
+  fill(0,0,100,255);
   ellipse(x, y, 60, 60);
 
   line(x-30,y+5,x+29,y+5)

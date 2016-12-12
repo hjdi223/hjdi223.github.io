@@ -1,32 +1,26 @@
 //Introduction more "atomic" programming with functions
 //We will use a function or collection of reusable commands to
 //draw a geometric pattern resembling a face
-function changeBackground(color){
-     document.body.style.background = color ;
-   }
-<BODY onload="changeBackground('red');">
-function FunnyFace(x,y){
-  stroke(0,0,0,255);
-  fill(0,0,100,255);
-  ellipse(x, y, 60, 60);
+var mr_dragon; //this is global variable
 
-  line(x-30,y+5,x+29,y+5)
-  line(x-30,y-5,x+29,y-5)
-  line(x-5,y-30,x-5,y+29)
-  line(x+5,y-30,x+5,y+29)
-
-
-  ellipse(x+25,y+35, 30, 30);
+function preload() {
+  //mr_dragon = loadImage("./dragon.png");
 }
 
 function setup() {
-  createCanvas(600,600);
-  background(0,167,201,200); //this is a color in RGBA colorspace : red, green, blue and alpha (opacity)
+  createCanvas(800,800);
+  background(1,136,163,300);
+  fill(222,0,93,300);}
 
-  for(var x=0;x<8;x++){
-      for(var y=0;y<8;y++){   //play with modulo operator
-        FunnyFace(1+x*80, y*80);
+function draw(){
+  //keep on keeping on = infinite loop
 
-    }
+  ellipse(mouseX, mouseY, 7+(1/5000*mouseX*mouseY), 7+(1/5000*mouseX*mouseY));
+  //line(mouseX, mouseY,1000-mouseX,1000-mouseY)
 }
+
+function mouseClicked() {
+
+    ellipse(mouseX,mouseY,60,60)
+  //image(mr_dragon,mouseX,mouseY,100,100);
 }
